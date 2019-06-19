@@ -101,8 +101,9 @@ public class Main {
         System.out.println("Так, пиздато, ну до скольки");
         double secondNumOfRange = Double.parseDouble(reader.readLine());
         for (int i = 0; i < list.size(); i++) {
-            if (list.get(i).getCalorie() > firstNumOfRange && list.get(i).getCalorie() < secondNumOfRange) {
-                System.out.println(list.get(i).getName() + " Количество каллорий - " + list.get(i).getCalorie());
+            double caloriesOfProduct = (list.get(i).getCalorie()*list.get(i).getWeight()/100);
+            if (caloriesOfProduct > firstNumOfRange && caloriesOfProduct < secondNumOfRange) {
+                System.out.println(list.get(i).getName() + " Количество каллорий - " + caloriesOfProduct);
             }
         }
     }
