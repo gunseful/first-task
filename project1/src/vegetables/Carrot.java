@@ -1,11 +1,13 @@
-public class Radish extends Vegetable{
+package vegetables;
 
-    private String name = "Radish";
-    private int calorie = 34;
-    private int cost = 8;
+public class Carrot extends Vegetable {
+
+    private String name = "Carrot";
+    private int calorie = 33;
+    private int cost = 5;
     private int weight;
 
-    public Radish(int weight) {
+    public Carrot(int weight) {
         this.weight = weight;
     }
 

@@ -1,11 +1,14 @@
-public class Vegetable {
+package vegetables;
 
-    protected String name;
-    protected int calorie;
-    protected int cost;
-    protected int weight;
+public class Radish extends Vegetable {
 
-    public Vegetable() {
+    private String name = "Radish";
+    private int calorie = 34;
+    private int cost = 8;
+    private int weight;
+
+    public Radish(int weight) {
+        this.weight = weight;
     }
 
     public String getName() {
@@ -20,5 +23,4 @@ public class Vegetable {
     public int getWeight() {
         return weight;
     }
-
 }

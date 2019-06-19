@@ -1,11 +1,13 @@
-public class Cucumber extends Vegetable{
+package vegetables;
 
-    private String name = "Cucumber";
-    private double calorie = 13.5;
-    private int cost = 15;
+public class SweetPaper extends Vegetable {
+
+    private String name = "Sweet paper";
+    private int calorie = 40;
+    private int cost = 5;
     private int weight;
 
-    public Cucumber(int weight) {
+    public SweetPaper(int weight) {
         this.weight = weight;
     }
 
@@ -21,5 +23,4 @@ public class Cucumber extends Vegetable{
     public int getWeight() {
         return weight;
     }
-
 }

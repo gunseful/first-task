@@ -1,24 +1,29 @@
-public class Garlic extends Vegetable{
+package vegetables;
 
-    private String name = "Garlic";
-    private int calorie = 106;
-    private int cost = 2;
-    private int weight;
+public class Vegetable {
 
-    public Garlic(int weight) {
-        this.weight = weight;
+    protected String name;
+    protected int calorie;
+    protected int cost;
+    protected int weight;
+
+    public Vegetable() {
     }
 
     public String getName() {
         return name;
     }
+
     public double getCalorie() {
         return calorie;
     }
+
     public int getCost() {
         return cost;
     }
+
     public int getWeight() {
         return weight;
     }
+
 }

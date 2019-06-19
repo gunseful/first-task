@@ -1,4 +1,6 @@
-public class Mushroom extends Vegetable{
+package vegetables;
+
+public class Mushroom extends Vegetable {
     private String name = "Mushroom";
     private int calorie = 25;
     private int cost = 20;

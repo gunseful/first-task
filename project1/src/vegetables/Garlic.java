@@ -1,11 +1,13 @@
-public class SweetPaper extends Vegetable{
+package vegetables;
 
-    private String name = "Sweet paper";
-    private int calorie = 40;
-    private int cost = 5;
+public class Garlic extends Vegetable {
+
+    private String name = "Garlic";
+    private int calorie = 106;
+    private int cost = 2;
     private int weight;
 
-    public SweetPaper(int weight) {
+    public Garlic(int weight) {
         this.weight = weight;
     }
 

@@ -1,4 +1,6 @@
-public class Onion extends Vegetable{
+package vegetables;
+
+public class Onion extends Vegetable {
 
     private String name = "Onion";
     private int cost = 5;
