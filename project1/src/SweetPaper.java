@@ -1,5 +1,3 @@
-package src.kz.karagandy.ilya.projectone;
-
 public class SweetPaper extends Vegetable{
 
     private String name = "Sweet paper";

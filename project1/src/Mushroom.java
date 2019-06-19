@@ -1,5 +1,3 @@
-package src.kz.karagandy.ilya.projectone;
-
 public class Mushroom extends Vegetable{
     private String name = "Mushroom";
     private int calorie = 25;

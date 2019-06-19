@@ -1,5 +1,3 @@
-package src.kz.karagandy.ilya.projectone;
-
 public class Onion extends Vegetable{
 
     private String name = "Onion";

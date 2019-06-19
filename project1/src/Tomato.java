@@ -1,5 +1,3 @@
-package src.kz.karagandy.ilya.projectone;
-
 public class Tomato extends Vegetable{
 
     String name = "Tomato";

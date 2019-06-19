@@ -1,5 +1,3 @@
-package src.kz.karagandy.ilya.projectone;
-
 public class Vegetable {
 
     protected String name;
