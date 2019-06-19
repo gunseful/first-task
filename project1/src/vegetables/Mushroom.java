@@ -14,12 +14,15 @@ public class Mushroom extends Vegetable {
     public String getName() {
         return name;
     }
+
     public double getCalorie() {
         return calorie;
     }
+
     public int getCost() {
         return cost;
     }
+
     public int getWeight() {
         return weight;
     }
