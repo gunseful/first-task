@@ -89,7 +89,8 @@ public class Main {
         System.out.println("Так ну чо получился у нас салат пиздатый. Ща расскажу про него");
         System.out.println("Короче вот список продуктов что ты выбрал и каллории которые они содержут, отсортировал для тебя родной:");
         for(int i = 0; i<list.size(); i++){
-            System.out.println(list.get(i).getName()+" Количество каллорий - "+list.get(i).getCalorie());
+            double caloriesOfProduct = (list.get(i).getCalorie()*list.get(i).getWeight()/100);
+            System.out.println(list.get(i).getName()+" Количество каллорий - "+caloriesOfProduct);
         }
         System.out.println();
         System.out.println("Общее количество каллорий = "+totalCalorie);
