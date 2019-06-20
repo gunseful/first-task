@@ -1,18 +1,27 @@
-import Salats.CaesarSalat;
-import Salats.HuyalatSalat;
-import Salats.SummerSalat;
+import people.Chef;
+import people.Visitor;
+import people.Waiter;
 
 import java.io.IOException;
 
 
 public class Main {
     public static void main(String[] args) throws InterruptedException, IOException {
-        Chef chef = new Chef();
-        chef.Greeting();
+        Visitor visitor = new Visitor();
 
-        chef.makingSummerSalat(new SummerSalat());
-        chef.makingCaesarSalat(new CaesarSalat());
-        chef.makingHuyalatSalat(new HuyalatSalat());
+        Waiter waiter = new Waiter();
+        waiter.greeting();
+
+        visitor.chooseSalat("ЦеЗарЬ");
+        waiter.takeOrder(visitor.getSalatName());
+
+        Chef chef = new Chef();
+        chef.makingSalat(waiter.tranferOrderToChef());
+        waiter.calculateCalories();
     }
+
+
+
+
 }
 

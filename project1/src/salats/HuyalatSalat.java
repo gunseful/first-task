@@ -1,4 +1,4 @@
-package Salats;
+package salats;
 
 import vegetables.*;
 
@@ -21,18 +21,7 @@ public class HuyalatSalat extends Salat {
         ingridientes.add(new SweetPaper(500));
         ingridientes.add(new Garlic(700));
         ingridientes.add(new Radish(800));
-        for (int i = 0; i < ingridientes.size(); i++) {
-            for (int n = 1; n < ingridientes.size(); n++) {
-                if (ingridientes.get(n).getCalorie() > ingridientes.get(n - 1).getCalorie()) {
-                    Vegetable less = ingridientes.get(n - 1);
-                    Vegetable more = ingridientes.get(n);
-                    ingridientes.remove(n - 1);
-                    ingridientes.add(n - 1, more);
-                    ingridientes.remove(n);
-                    ingridientes.add(n, less);
-                }
-            }
-        }
+
         return ingridientes;
     }
 }
