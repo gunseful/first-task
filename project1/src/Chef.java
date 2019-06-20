@@ -3,10 +3,11 @@
 import Salats.CaesarSalat;
 import Salats.HuyalatSalat;
 import Salats.SummerSalat;
+import vegetables.Vegetable;
 
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
+
+import static java.util.stream.Collectors.joining;
 
 public class Chef {
     public void Greeting() {
@@ -23,13 +24,8 @@ public class Chef {
         salat.getName();
         System.out.println("\nНачинаем готовить " + salat.getName());
         System.out.print("Кладем в чашку - ");
-        for (int i = 0; i < salat.getIngridients().size(); i++) {
-            if (i == salat.getIngridients().size() - 1) {
-                System.out.print(salat.getIngridients().get(i).getName() + ". ");
-            } else {
-                System.out.print(salat.getIngridients().get(i).getName() + ", ");
-            }
-        }
+        String vegetableList = salat.getIngridients().stream().map(Vegetable::getName).collect(joining(", "));
+        System.out.println(vegetableList + ".");
         System.out.println("Перемешиваем");
         System.out.println("Готово!\n");
         double TotalCallories = 0;
