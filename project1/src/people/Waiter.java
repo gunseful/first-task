@@ -1,6 +1,6 @@
 package people;
 
-import Menu.Menu;
+import menu.Menu;
 import salats.Salat;
 import vegetables.Vegetable;
 
