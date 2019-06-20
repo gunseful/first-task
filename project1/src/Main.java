@@ -2,11 +2,9 @@ import people.Chef;
 import people.Visitor;
 import people.Waiter;
 
-import java.io.IOException;
-
 
 public class Main {
-    public static void main(String[] args) throws InterruptedException, IOException {
+    public static void main(String[] args) {
         Visitor visitor = new Visitor();
 
         Waiter waiter = new Waiter();
@@ -22,8 +20,6 @@ public class Main {
         chef.makingSalat();
         waiter.calculateCalories();
     }
-
-
 
 
 }
