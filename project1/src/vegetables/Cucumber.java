@@ -2,7 +2,7 @@ package vegetables;
 
 public class Cucumber extends Vegetable {
 
-    private String name = "Cucumber";
+    private String name = "огурец";
     private double calorie = 13.5;
     private int cost = 15;
     private int weight;

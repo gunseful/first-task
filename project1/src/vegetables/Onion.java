@@ -2,7 +2,7 @@ package vegetables;
 
 public class Onion extends Vegetable {
 
-    private String name = "Onion";
+    private String name = "лук";
     private int cost = 5;
     private int calorie = 43;
     private int weight;

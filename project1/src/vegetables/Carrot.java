@@ -2,7 +2,7 @@ package vegetables;
 
 public class Carrot extends Vegetable {
 
-    private String name = "Carrot";
+    private String name = "морковь";
     private int calorie = 33;
     private int cost = 5;
     private int weight;

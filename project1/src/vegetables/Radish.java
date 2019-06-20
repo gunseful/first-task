@@ -2,7 +2,7 @@ package vegetables;
 
 public class Radish extends Vegetable {
 
-    private String name = "Radish";
+    private String name = "редис";
     private int calorie = 34;
     private int cost = 8;
     private int weight;

@@ -10,13 +10,16 @@ public class Main {
         Visitor visitor = new Visitor();
 
         Waiter waiter = new Waiter();
+        Chef chef = new Chef();
         waiter.greeting();
 
-        visitor.chooseSalat("ЦеЗарЬ");
+        visitor.chooseSalat("Цезарь");
         waiter.takeOrder(visitor.getSalatName());
+        waiter.checkMenu();
 
-        Chef chef = new Chef();
-        chef.makingSalat(waiter.tranferOrderToChef());
+
+        chef.takeTaskFromWaiter(waiter.giveTaskToChef());
+        chef.makingSalat();
         waiter.calculateCalories();
     }
 

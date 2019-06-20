@@ -1,7 +1,7 @@
 package vegetables;
 
 public class Mushroom extends Vegetable {
-    private String name = "Mushroom";
+    private String name = "грибы";
     private int calorie = 25;
     private int cost = 20;
     private int weight;
