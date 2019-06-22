@@ -6,9 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BocharnikovSalat extends Salat{
+    private String name = "Бочарников";
     @Override
     public String getName() {
-        return null;
+        return name;
     }
 
     @Override

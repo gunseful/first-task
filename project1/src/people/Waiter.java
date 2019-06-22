@@ -1,16 +1,19 @@
 package people;
 
+import menu.Comparators;
 import menu.Menu;
 import salats.Salat;
 import vegetables.Vegetable;
 
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
-import java.util.Map;
 
 public class Waiter {
     private String dishName;
     String word = null;
     private Salat salat = null;
+    ArrayList<String> menu;
 
     public String firstUpperCase(String word) {
         if (word == null || word.isEmpty()) return "";
@@ -18,55 +21,45 @@ public class Waiter {
     }
 
     public void greeting() {
-        System.out.println("Здравствуйте! Держите меню, выберете один из наших салатов");
-        System.out.println("Салат Летний");
-        System.out.println("Цезарь");
-        System.out.println("Салат Хуялат\n");
+        System.out.println("Здравствуйте! Держите меню, выберете один из наших салатов\n");
+        for (int i = 0; i < Menu.getMenu().size(); i++) {
+            System.out.println(Menu.getMenu().get(i));
+        }
     }
 
     public Waiter() {
     }
 
-    public String takeOrder(String dishName) {
-        System.out.println("Отличный выбор:)");
+    public void takeOrder(String dishName) {
         this.dishName = dishName;
-        return this.dishName;
+    }
+
+    public void takeSalatFromChef(Salat salat) {
+        this.salat = salat;
     }
 
     public void checkMenu() {
-        Menu menu = new Menu();
-        menu.getMenu();
-        for (Map.Entry<String, Salat> pair : menu.getMenu().entrySet()) {
-            if (dishName.equals(pair.getKey())) {
-                salat = pair.getValue();
+        menu = Menu.getMenu();
+        for (String o : Menu.getMenu()) {
+            if (dishName.equals(o)) {
+                System.out.println("\nВаш заказ принят:)");
                 break;
-            } else salat = null;
+            }
         }
     }
 
-    public Salat giveTaskToChef() {
-        return salat;
+    public String giveTaskToChef() {
+        return dishName;
     }
 
     public void calculateCalories() {
         List<Vegetable> listByCalories;
         listByCalories = salat.getIngridients();
-        for (int i = 0; i < listByCalories.size(); i++) {
-            for (int n = 1; n < listByCalories.size(); n++) {
-                if (listByCalories.get(n).getCalorie() > listByCalories.get(n - 1).getCalorie()) {
-                    Vegetable less = listByCalories.get(n - 1);
-                    Vegetable more = listByCalories.get(n);
-                    listByCalories.remove(n - 1);
-                    listByCalories.add(n - 1, more);
-                    listByCalories.remove(n);
-                    listByCalories.add(n, less);
-                }
-            }
-        }
+        Collections.sort(listByCalories, Comparators.CALORIE);
 
         double TotalCallories = 0;
         System.out.println("Позвольте рассказать вам немного о салате:)\n");
-        for (int i = 0; i < listByCalories.size(); i++) {
+        for (int i = listByCalories.size() - 1; i >= 0; i--) {
             System.out.println(" Количество каллорий в 100гр продукта " + firstUpperCase(listByCalories.get(i).getName()) + " - " + listByCalories.get(i).getCalorie());
         }
         for (int i = 0; i < listByCalories.size(); i++) {

@@ -1,18 +1,15 @@
 package menu;
 
-import salats.*;
-
-import java.util.HashMap;
+import java.util.ArrayList;
 
 public class Menu {
-    HashMap<String, Salat> salatMap = new HashMap<>();
 
-    public HashMap<String, Salat> getMenu() {
-        salatMap.put("цезарь", new CaesarSalat());
-        salatMap.put("хуялат", new HuyalatSalat());
-        salatMap.put("летний", new SummerSalat());
-        salatMap.put("хз салат", new HzSalat());
-
-        return salatMap;
+    public static ArrayList<String> getMenu() {
+        ArrayList<String> listOfSalats = new ArrayList<>();
+        for (Kitchen o : Kitchen.values()) {
+            String salatName = o.getName();
+            listOfSalats.add(salatName);
+        }
+        return listOfSalats;
     }
 }

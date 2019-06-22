@@ -11,13 +11,17 @@ public class Main {
         Chef chef = new Chef();
         waiter.greeting();
 
-        visitor.chooseSalat("Цезарь");
+        visitor.chooseSalat("цезарь");
         waiter.takeOrder(visitor.getSalatName());
         waiter.checkMenu();
 
 
+
+
         chef.takeTaskFromWaiter(waiter.giveTaskToChef());
         chef.makingSalat();
+
+        waiter.takeSalatFromChef(chef.getSalat());
         waiter.calculateCalories();
     }
 
