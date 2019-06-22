@@ -15,9 +15,6 @@ public class Main {
         waiter.takeOrder(visitor.getSalatName());
         waiter.checkMenu();
 
-
-
-
         chef.takeTaskFromWaiter(waiter.giveTaskToChef());
         chef.makingSalat();
 

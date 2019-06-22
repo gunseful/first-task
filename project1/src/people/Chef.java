@@ -26,16 +26,13 @@ public class Chef {
         } catch (Exception e) {
 
         }
-        try {
             System.out.println("\nНачинаем готовить " + salat.getName());
             System.out.print("Кладем в чашку - ");
             String vegetableList = salat.getIngridients().stream().map(Vegetable::getName).collect(joining(", "));
             System.out.println(vegetableList + ".");
             System.out.println("Перемешиваем");
             System.out.println("Готово!\n");
-        } catch (Exception e) {
-            System.out.println("Извините, такого салата в меню нет");
-        }
+
 
         return salat;
     }

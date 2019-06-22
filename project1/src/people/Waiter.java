@@ -11,9 +11,7 @@ import java.util.List;
 
 public class Waiter {
     private String dishName;
-    String word = null;
     private Salat salat = null;
-    ArrayList<String> menu;
 
     public String firstUpperCase(String word) {
         if (word == null || word.isEmpty()) return "";
@@ -39,13 +37,15 @@ public class Waiter {
     }
 
     public void checkMenu() {
-        menu = Menu.getMenu();
+        ArrayList<String> menu = Menu.getMenu();
+        String orderName = "\nТакого салата нет в меню";
         for (String o : Menu.getMenu()) {
             if (dishName.equals(o)) {
-                System.out.println("\nВаш заказ принят:)");
+                orderName = "\nВаш заказ принят";
                 break;
             }
         }
+        System.out.println(orderName);
     }
 
     public String giveTaskToChef() {
